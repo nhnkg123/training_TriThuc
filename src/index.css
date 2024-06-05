@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,174 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+.main {
+  background-color: #24495f;
+}
+
+.nav {
+  width: 100%;
+  height: auto;
+  background-color: #33cc66;
+  padding: 5px 0;
+  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(225, 220, 220);
+  width: 300px;
+  height: auto;
+  padding: 0 30px;
+  align-items: center;
+}
+
+.header {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+
+.lbErrorMessage {
+  color: red;
+  font-style: italic;
+}
+
+.form-control {
+  width: 270px;
+  height: auto;
+  margin: 5px 0;
+  padding: 7px 15px;
+  color: #7c7c7c;
+  border: none;
+}
+
+.or {
+  margin: 10px 0;
+}
+
+.btnLogin {
+  margin: 5px 0;
+  width: 100%;
+  padding: 7px 0;
+  background-color: rgb(4, 165, 4);
+  color: #fff;
+  border: none;
+}
+
+.btnRegist {
+  width: 100%;
+  margin: 5px 0;
+  padding: 7px 0;
+  background-color: brown;
+  color: #fff;
+  border: none;
+}
+
+.forgot-password {
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-style: italic;
+  color: rgb(67, 67, 240);
+}
+
+.modal {
+  background-color: rgb(232, 232, 232, 0.9);
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translate(-100%, 0);
+  padding: 10px 30px;
+  padding-bottom: 20px;
+  border-radius: 6px;
+  width: 250px;
+  z-index: 10;
+  border: none;
+  /* backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
+}
+
+.modal-input {
+  border: none;
+  padding: 5px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btnSend {
+  margin-top: 15px;
+}
+
+.background-model {
+  background-color: rgba(0, 0, 0, 0.7);
+  /* width: 100%; */
+  height: 100%;
+  position: fixed;
+  top: 50px;
+  left: 10px;
+  right: 10px;
+  z-index: 5;
+}
+
+.delete-button {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.spinnerContainer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  top: 50px;
+  left: 10px;
+  right: 10px;
+}
+
+/* loading  */
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.834);
+  z-index: 1;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #3d5af1 transparent #3d5af1 transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

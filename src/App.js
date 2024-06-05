@@ -88,9 +88,9 @@ function App() {
   };
 
   return (
-    <>
-      <Nav />
-      <div className="main">
+    <div className='h-screen w-screen'>
+      <Nav className='bg-emerald-600 text-white h-10 text-lg content-center ps-3' />
+      <div className="main h-full">
         <ModalChangePass
           openModalChangePass={currentOpenModel === 'modelChangePass'}
           CloseModalChangePass={currentCloseModel === 'closeModelChangePass'}
@@ -114,13 +114,13 @@ function App() {
           setError={setError}
         />
 
-        <div className="login">
-          <div className='container'>
-            <div className='header'>{isRegister ? 'Đăng ký' : 'Đăng nhập'}</div>
+        <div className="login flex justify-center content-center h-full bg-emerald-400">
+          <div className='bg-gray-300 w-2/5 h-auto self-center p-5 rounded-md'>
+            <div className='header py-2 uppercase text-lg text-blue-600 font-bold text-center'>{isRegister ? 'Đăng ký' : 'Đăng nhập'}</div>
             <ErrorMessage message={error} />
             <input
               type='text'
-              className='form-control'
+              className='form-control py-2 block w-full rounded-md border-0 my-2'
               name='txtUserName'
               id='txtUserName'
               placeholder='Tên đăng nhập'
@@ -131,7 +131,7 @@ function App() {
             />
             <input
               type='password'
-              className='form-control'
+              className='form-control py-2 block w-full rounded-md border-0 my-2'
               name='txtPassword'
               id='txtPassword'
               placeholder='Mật khẩu'
@@ -142,7 +142,7 @@ function App() {
             />
             {isRegister && (<input
               type='password'
-              className='form-control'
+              className='form-control py-2'
               name='txtConfirmRegistPass'
               id='txtConfirmRegistPass'
               placeholder='Nhập lại mật khẩu'
@@ -153,23 +153,23 @@ function App() {
             />)}
             <Button
               id='btnLogin'
-              className='btnLogin'
+              className='btnLogin py-2 w-full bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md focus:bg-blue-200 focus:ring-blue-600'
               onClick={() => fetchLogin()}>
               Đăng nhập
             </Button>
-            <div className='or'>hoặc</div>
+            <div className='or text-center my-2'>hoặc</div>
             <Button
               id='btnRegist'
-              className='btnRegist'
+              className='btnRegist py-2 w-full bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md'
               onClick={() => fetchRegister()}
             >
               Tạo tài khoản
             </Button>
-            <a className='forgot-password' href='#' onClick={onClickResetBtn}>Quên mật khẩu?</a>
+            <a className='forgot-password text-center italic text-blue-600 mt-3' href='#' onClick={onClickResetBtn}>Quên mật khẩu?</a>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

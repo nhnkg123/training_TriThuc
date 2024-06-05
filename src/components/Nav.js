@@ -1,6 +1,6 @@
-export default function Nav() {
+export default function Nav({ className }) {
     return (
-        <nav className="nav">
+        <nav className={className}>
             Training
         </nav>
     );
